@@ -38,21 +38,21 @@ int main()
 
     // We use the three timers as PWM outputs
     // Setup timer 0
-    // Fast PWM, inverting output at OC0A
+    // Phase correct PWM, inverting output at OC0A
     // Clock divided by 8
-    TCCR0A = (1 << COM0A1) | (1 << COM0A0) | (1 << WGM01) | (1 << WGM00);
+    TCCR0A = (1 << COM0A1) | (1 << COM0A0) | (1 << WGM00);
     TCCR0B = (1 << CS01);
     
     // Setup timer 1 (16 bit timer)
-    // 8 bit fast PWM, inverting output at OC1A
+    // 8 bit phase correct PWM, inverting output at OC1A
     // Clock divided by 8
     TCCR1A = (1 << COM1A1) | (1 << COM1A0) | (1 << WGM10);
-    TCCR1B = (1 << CS11) | (1 << WGM12);
+    TCCR1B = (1 << CS11);
 
     // Setup timer 2
-    // Fast PWM, inverting output at OC2A
+    // Phase correct PWM, inverting output at OC2A
     // Clock divided by 8
-    TCCR2A = (1 << COM2A1) | (1 << WGM21) | (1 << WGM20);
+    TCCR2A = (1 << COM2A1) | (1 << COM2A0) | (1 << WGM20);
     TCCR2B = (1 << CS21);
 
     OCR0A = 0;
