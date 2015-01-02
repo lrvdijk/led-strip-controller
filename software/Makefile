@@ -227,8 +227,8 @@ hex: $(HEXTRG)
 
 writeflash: hex
 	$(AVRDUDE) -c $(AVRDUDE_PROGRAMMERID)   \
-	 -p $(PROGRAMMER_MCU) -P $(AVRDUDE_PORT) -e        \
-	 -U flash:w:$(HEXROMTRG)
+	 -p $(PROGRAMMER_MCU) -e        \
+	 -U flash:w:$(HEXROMTRG) -B 10
 
 install: writeflash
 
