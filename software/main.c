@@ -12,21 +12,19 @@
  * @license MIT License
  */
 
+#define F_CPU 1000000UL
+
 #include <avr/io.h>
 #include <avr/interrupt.h>
 #include <stdint.h>
 
 #include "colors.h"
 
-#define F_CPU 1000000L
-
 int main()
 {
-    cli();
-
     // Configure PWM ports as output
-    DDRB = (1 << DDB1) | (1 << DDB3);
-    DDRD = (1 << DDD6);
+    DDRB = 0xFF;
+    DDRD = 0xFF;
 
     PORTB = 0;
     PORTD = 0;
@@ -40,35 +38,33 @@ int main()
 
     // We use the three timers as PWM outputs
     // Setup timer 0
-    // Fast PWM, non inverting output at OC0A
+    // Fast PWM, inverting output at OC0A
     // Clock divided by 8
-    TCCR0A = (1 << COM0A1) | (1 << WGM01) | (1 << WGM00);
+    TCCR0A = (1 << COM0A1) | (1 << COM0A0) | (1 << WGM01) | (1 << WGM00);
     TCCR0B = (1 << CS01);
     
     // Setup timer 1 (16 bit timer)
-    // 8 bit fast PWM, non inverting output at OC1A
+    // 8 bit fast PWM, inverting output at OC1A
     // Clock divided by 8
-    TCCR1A = (1 << COM1A1) | (1 << WGM10);
+    TCCR1A = (1 << COM1A1) | (1 << COM1A0) | (1 << WGM10);
     TCCR1B = (1 << CS11) | (1 << WGM12);
 
     // Setup timer 2
-    // Fast PWM, non inverting output at OC2A
+    // Fast PWM, inverting output at OC2A
     // Clock divided by 8
     TCCR2A = (1 << COM2A1) | (1 << WGM21) | (1 << WGM20);
     TCCR2B = (1 << CS21);
 
-    OCR0A = 128;
-    OCR1A = 128;
-    OCR2A = 128;
+    OCR0A = 0;
+    OCR1A = 0;
+    OCR2A = 0;
 
-    sei();
-    
     const uint16_t steps_between_colors = 1024 / num_colors;
     uint16_t value = 0;
     while(1)
     {
         // Start conversion
-        ADCSRA = (1 << ADSC);
+        ADCSRA |= (1 << ADSC);
 
         // Wait until conversion is ready
         while(ADCSRA & (1 << ADSC));
