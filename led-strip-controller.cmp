@@ -1,0 +1,129 @@
+Cmp-Mod V01 Created by Cvpcb (2014-12-28 BZR 5340)-product   date = Thu 08 Jan 2015 15:53:05 CET
+
+BeginCmp
+TimeStamp = /54AEA7F9;
+Reference = C1;
+ValeurCmp = 10u;
+IdModule  = Capacitors_Elko_ThroughHole:Elko_vert_11.2x6.3mm_RM2.5;
+EndCmp
+
+BeginCmp
+TimeStamp = /54AEA89F;
+Reference = C2;
+ValeurCmp = 1u;
+IdModule  = Capacitors_Elko_ThroughHole:Elko_vert_11.2x6.3mm_RM2.5;
+EndCmp
+
+BeginCmp
+TimeStamp = /549EB898;
+Reference = C3;
+ValeurCmp = 10n;
+IdModule  = Capacitors_ThroughHole:Capacitor6x11RM18;
+EndCmp
+
+BeginCmp
+TimeStamp = /549BF789;
+Reference = C4;
+ValeurCmp = 10n;
+IdModule  = Capacitors_ThroughHole:Capacitor6MMDiscRM5;
+EndCmp
+
+BeginCmp
+TimeStamp = /549BFB44;
+Reference = C5;
+ValeurCmp = 10n;
+IdModule  = Capacitors_ThroughHole:Capacitor6MMDiscRM5;
+EndCmp
+
+BeginCmp
+TimeStamp = /549C14BD;
+Reference = C6;
+ValeurCmp = 10n;
+IdModule  = Capacitors_ThroughHole:Capacitor6MMDiscRM5;
+EndCmp
+
+BeginCmp
+TimeStamp = /54AE93BD;
+Reference = CON1;
+ValeurCmp = BARREL_JACK;
+IdModule  = Connect:BARREL_JACK;
+EndCmp
+
+BeginCmp
+TimeStamp = /549BF059;
+Reference = IC1;
+ValeurCmp = ATMEGA168-P;
+IdModule  = Sockets_DIP:DIP-28__300_ELL;
+EndCmp
+
+BeginCmp
+TimeStamp = /54A20CE6;
+Reference = P2;
+ValeurCmp = CONN_01X04;
+IdModule  = Pin_Headers:Pin_Header_Angled_1x04;
+EndCmp
+
+BeginCmp
+TimeStamp = /54A17FBE;
+Reference = Q1;
+ValeurCmp = BS170;
+IdModule  = Housings_TO-92:TO-92-FET-inline-narrow-oval-SGD;
+EndCmp
+
+BeginCmp
+TimeStamp = /54A18895;
+Reference = Q2;
+ValeurCmp = BS170;
+IdModule  = Housings_TO-92:TO-92-FET-inline-narrow-oval-SGD;
+EndCmp
+
+BeginCmp
+TimeStamp = /54A188D4;
+Reference = Q3;
+ValeurCmp = BS170;
+IdModule  = Housings_TO-92:TO-92-FET-inline-narrow-oval-SGD;
+EndCmp
+
+BeginCmp
+TimeStamp = /549EB75C;
+Reference = R1;
+ValeurCmp = 10k;
+IdModule  = Resistors_ThroughHole:Resistor_Horizontal_RM15mm;
+EndCmp
+
+BeginCmp
+TimeStamp = /54A1BFBB;
+Reference = R2;
+ValeurCmp = 680;
+IdModule  = Resistors_ThroughHole:Resistor_Horizontal_RM15mm;
+EndCmp
+
+BeginCmp
+TimeStamp = /54A1BEED;
+Reference = R3;
+ValeurCmp = 680;
+IdModule  = Resistors_ThroughHole:Resistor_Horizontal_RM15mm;
+EndCmp
+
+BeginCmp
+TimeStamp = /54A1C00F;
+Reference = R4;
+ValeurCmp = 680;
+IdModule  = Resistors_ThroughHole:Resistor_Horizontal_RM15mm;
+EndCmp
+
+BeginCmp
+TimeStamp = /549BF676;
+Reference = RV1;
+ValeurCmp = POT;
+IdModule  = ;
+EndCmp
+
+BeginCmp
+TimeStamp = /549C1E95;
+Reference = U1;
+ValeurCmp = LM7805;
+IdModule  = Transistors_TO-220:TO-220_Neutral123_Horizontal;
+EndCmp
+
+EndListe
