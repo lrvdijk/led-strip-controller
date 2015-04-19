@@ -3,7 +3,7 @@
  * ====================
  *
  * This program for an AVR atmega168 is a controller to drive a RGB LED strip.
- * A protentiometer can be used to select the colour of the LED strip. 
+ * A protentiometer can be used to select the colour of the LED strip.
  *
  * We use the ADC of the AVR to determine the position of the potentiometer, and
  * using that value we select one of the predefined colours.
@@ -18,21 +18,27 @@
 #include "colors.h"
 
 static const uint8_t color_r[] PROGMEM = {
+    0,
     0xFF,
     0,
-    0
+    0,
+    0xFF,
 };
 
 static const uint8_t color_g[] PROGMEM = {
     0,
+    0,
     0xFF,
-    0
+    0,
+    0xFF,
 };
 
 static const uint8_t color_b[] PROGMEM = {
     0,
     0,
-    0xFF
+    0,
+    0xFF,
+    0xFF,
 };
 
 const uint8_t num_colors = sizeof(color_r) / sizeof(uint8_t);

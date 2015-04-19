@@ -3,7 +3,7 @@
  * ====================
  *
  * This program for an AVR atmega168 is a controller to drive a RGB LED strip.
- * A protentiometer can be used to select the colour of the LED strip. 
+ * A protentiometer can be used to select the colour of the LED strip.
  *
  * We use the ADC of the AVR to determine the position of the potentiometer, and
  * using that value we select one of the predefined colours.
@@ -40,26 +40,26 @@ int main()
     // Setup timer 0
     // Phase correct PWM, inverting output at OC0A
     // Clock divided by 8
-    TCCR0A = (1 << COM0A1) | (1 << COM0A0) | (1 << WGM00);
+    TCCR0A = (1 << COM0A1) | (1 << WGM00);
     TCCR0B = (1 << CS01);
-    
+
     // Setup timer 1 (16 bit timer)
     // 8 bit phase correct PWM, inverting output at OC1A
     // Clock divided by 8
-    TCCR1A = (1 << COM1A1) | (1 << COM1A0) | (1 << WGM10);
+    TCCR1A = (1 << COM1A1) | (1 << WGM10);
     TCCR1B = (1 << CS11);
 
     // Setup timer 2
     // Phase correct PWM, inverting output at OC2A
     // Clock divided by 8
-    TCCR2A = (1 << COM2A1) | (1 << COM2A0) | (1 << WGM20);
+    TCCR2A = (1 << COM2A1) | (1 << WGM20);
     TCCR2B = (1 << CS21);
 
     OCR0A = 0;
     OCR1A = 0;
     OCR2A = 0;
 
-    const uint16_t steps_between_colors = 1024 / num_colors;
+    const uint16_t steps_between_colors = (1024.0 / num_colors) + 0.5;
     uint16_t value = 0;
     while(1)
     {
@@ -71,7 +71,7 @@ int main()
 
         // Reset flag
         ADCSRA |= (1 << ADIF);
-        
+
         // Read ADC register to complete the conversion
         value = ADC;
 
