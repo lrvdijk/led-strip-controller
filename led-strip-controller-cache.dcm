@@ -1,0 +1,15 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP IRF540N
+D IRF540N, 100V Vds, 33A Id, HEXFET N-Channel MOSFET, TO220
+K HEXFET N-Channel MOSFET
+F http://www.irf.com/product-info/datasheets/data/irf540n.pdf
+$ENDCMP
+#
+$CMP IRF640N
+D IRF640N, 200V Vds, 18A Id, HEXFET N-Channel MOSFET, TO220
+K HEXFET N-Channel MOSFET
+F http://www.irf.com/product-info/datasheets/data/irf640n.pdf
+$ENDCMP
+#
+#End Doc Library
