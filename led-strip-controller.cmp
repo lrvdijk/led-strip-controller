@@ -1,45 +1,45 @@
-Cmp-Mod V01 Created by Cvpcb (2014-12-28 BZR 5340)-product   date = Thu 08 Jan 2015 15:53:05 CET
+Cmp-Mod V01 Created by Cvpcb (2015-04-17 BZR 5609)-product   date = Sun 19 Apr 2015 23:53:43 CEST
 
 BeginCmp
 TimeStamp = /54AEA7F9;
 Reference = C1;
 ValeurCmp = 10u;
-IdModule  = Capacitors_Elko_ThroughHole:Elko_vert_11.2x6.3mm_RM2.5;
+IdModule  = Capacitors_Elko_ThroughHole:Elko_vert_11x5mm_RM2.5;
 EndCmp
 
 BeginCmp
 TimeStamp = /54AEA89F;
 Reference = C2;
 ValeurCmp = 1u;
-IdModule  = Capacitors_Elko_ThroughHole:Elko_vert_11.2x6.3mm_RM2.5;
+IdModule  = Capacitors_Elko_ThroughHole:Elko_vert_11x5mm_RM2.5;
 EndCmp
 
 BeginCmp
 TimeStamp = /549EB898;
 Reference = C3;
 ValeurCmp = 10n;
-IdModule  = Capacitors_ThroughHole:Capacitor6x11RM18;
+IdModule  = Capacitors_ThroughHole:C_Disc_D3_P2.5;
 EndCmp
 
 BeginCmp
 TimeStamp = /549BF789;
 Reference = C4;
 ValeurCmp = 10n;
-IdModule  = Capacitors_ThroughHole:Capacitor6MMDiscRM5;
+IdModule  = Capacitors_ThroughHole:C_Disc_D3_P2.5;
 EndCmp
 
 BeginCmp
 TimeStamp = /549BFB44;
 Reference = C5;
 ValeurCmp = 10n;
-IdModule  = Capacitors_ThroughHole:Capacitor6MMDiscRM5;
+IdModule  = Capacitors_ThroughHole:C_Disc_D3_P2.5;
 EndCmp
 
 BeginCmp
 TimeStamp = /549C14BD;
 Reference = C6;
 ValeurCmp = 10n;
-IdModule  = Capacitors_ThroughHole:Capacitor6MMDiscRM5;
+IdModule  = Capacitors_ThroughHole:C_Disc_D3_P2.5;
 EndCmp
 
 BeginCmp
